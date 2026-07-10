@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: 801651112210.dkr.ecr.ap-south-1.amazonaws.com/khushboo-frontend-repo:v1
+        image: 801651112210.dkr.ecr.ap-south-1.amazonaws.com/khushboo-ai-worker:latest
+        imagePullPolicy: Always 
         ports:
         - containerPort: 80
 ---
