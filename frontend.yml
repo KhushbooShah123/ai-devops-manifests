@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: nginx:alpine
+        image: 801651112210.dkr.ecr.ap-south-1.amazonaws.com/khushboo-frontend-repo:v1
         ports:
         - containerPort: 80
 ---
