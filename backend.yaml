@@ -13,15 +13,16 @@ spec:
         app: ai-worker
     spec:
       containers:
-      - name: ai-worker
-        image: 801651112210.dkr.ecr.ap-south-1.amazonaws.com/khushboo-ai-worker:latest
-        imagePullPolicy: Always 
-        ports:
-        - containerPort: 5000
-        resources:
-          requests:
-            cpu: "100m"
-            memory: "128Mi"
+        - name: ai-worker
+          image: 801651112210.dkr.ecr.ap-south-1.amazonaws.com/khushboo-ai-worker:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+
 ---
 apiVersion: v1
 kind: Service
@@ -30,7 +31,9 @@ metadata:
 spec:
   selector:
     app: ai-worker
-    ports:
-      - name: web
-        port: 5000
-        targetPort: 5000
+  ports:
+    - name: web
+      port: 5000
+      targetPort: 5000
+      protocol: TCP
+  type: ClusterIP
