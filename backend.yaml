@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ai-worker
-        image: 801651112210.dkr.ecr.ap-south-1.amazonaws.com/khushboo-ai-worker:v1 # REAL IMAGE
+        image: 801651112210.dkr.ecr.ap-south-1.amazonaws.com/khushboo-ai-worker:v2 # REAL IMAGE
         ports:
         - containerPort: 5000
         resources:
