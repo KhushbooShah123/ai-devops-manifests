@@ -28,6 +28,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: ai-worker-service
+  labels:
+    app: ai-worker
 spec:
   selector:
     app: ai-worker
