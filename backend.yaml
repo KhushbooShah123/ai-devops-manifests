@@ -18,6 +18,9 @@ spec:
         ports:
         - containerPort: 5000
           name: web
+        envFrom:
+        - secretRef:
+            name: app-db-credentials
         resources:
           requests:
             cpu: "100m"
