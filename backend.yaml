@@ -16,9 +16,8 @@ spec:
       - name: ai-worker
         image: 801651112210.dkr.ecr.ap-south-1.amazonaws.com/khushboo-ai-worker:latest
         ports:
-        - name: web
-          port: 5000
-          targetPort: 5000
+        - containerPort: 5000
+          name: web
         resources:
           requests:
             cpu: "100m"
