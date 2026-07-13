@@ -45,6 +45,7 @@ metadata:
   labels:
     app: ai-worker
 spec:
+  type: ClusterIP
   selector:
     app: ai-worker
   ports:
